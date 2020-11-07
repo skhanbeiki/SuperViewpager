@@ -4,7 +4,7 @@
 
 With SuperViewpager you can easily use fragments.
 
- ![alt text](https://github.com/skhanbeiki/Payfa/blob/master/images/head.png)
+ ![alt text](https://github.com/skhanbeiki/SuperViewpager/blob/master/image/viewpager.gif)
  
 You can create multiple fragments.
 Set a time to run the fragments.
