@@ -1,9 +1,9 @@
 package ir.khanbeiki.superviewpager.sample;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
-import android.os.Bundle;
 
 import ir.khanbeiki.superviewpager.TabAdapter;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
@@ -12,7 +12,7 @@ import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    private  PageNavigationView pageNavigationView;
+    private PageNavigationView pageNavigationView;
     private NavigationController navigationControllerOne;
     private ViewPager viewPager;
 
@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
 
         TabAdapter adapter = new TabAdapter(getSupportFragmentManager(), 0);
-        adapter.addFragment(0, true, new FrgDashboard(), "0");
-        adapter.addFragment(1, true, new FrgDashboard(), "1");
-        adapter.addFragment(2, true, new FrgDashboard(), "2");
-        adapter.addFragment(3, true, new FrgDashboard(), "3");
+        adapter.addFragment(0, true, new FrgDashboard("Dashboard"), "0");
+        adapter.addFragment(1, false, new FrgDashboard("LessonMap"), "1");
+        adapter.addFragment(2, 1, new FrgDashboard("LeaderBoard"), "2");
+        adapter.addFragment(3, 5, new FrgDashboard("Analyze"), "3");
 
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(4);
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         navigationControllerOne.setupWithViewPager(viewPager);
         adapter.setViewPager(viewPager);
     }
+
     private BaseTabItem newItem(int drawable, int checkedDrawable, String title) {
         OnlyIconItemView mainTab = new OnlyIconItemView(this);
         mainTab.initialize(drawable, checkedDrawable);
