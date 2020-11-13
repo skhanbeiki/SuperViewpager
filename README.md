@@ -12,7 +12,7 @@ Repeat the fragments each time.
 
 
 # Attributes
-+ Fast
++ Custom
 + Easy
 + Viewpager
 + Android X
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-   implementation 'com.github.skhanbeiki:SuperViewpager:1.1'
+   implementation 'com.github.skhanbeiki:SuperViewpager:1.2'
 }
 ```
 Or Maven:
@@ -58,7 +58,7 @@ Or Maven:
 ```java
         ViewPager viewPager = findViewById(R.id.viewPager);
         
-        TabAdapter adapter = new TabAdapter(getSupportFragmentManager(), 0);
+        SuperAdapter adapter = new SuperAdapter(getSupportFragmentManager(), 0);
         adapter.addFragment(0, true, new FrgFirst(), "title");
         adapter.addFragment(1, false, new FrgSecond(), "title");
         adapter.addFragment(2, 1, new FrgThird(), "title");
