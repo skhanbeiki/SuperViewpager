@@ -68,7 +68,17 @@ Or Maven:
         viewPager.setOffscreenPageLimit(4);
         viewPager.setCurrentItem(0);
 ```
+# Description
+```
+adapter.addFragment(int id , boolean isDisposable , Fragment fragment , String title);
+adapter.addFragment(int id , long minutes , Fragment fragment , String title);
+```
+The "onFragmentAlwaysDo" method is always executed.
 
+id = The ID must be unique to be stored in the time database.
+isDisposable if true = The "onFragmentCommandDo" method is executed only once.
+isDisposable if false = The "onFragmentCommandDo" method is always executed.
+minutes >= 1 After the desired number (minutes), the "onFragmentCommandDo" method is executed.
 # Author
 
 [Moslem Khanbeiki](http://khanbeiki.ir/)
