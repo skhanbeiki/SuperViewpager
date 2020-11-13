@@ -16,14 +16,14 @@ import java.util.Calendar;
 import java.util.List;
 
 
-public class TabAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
+public class SuperAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final List<String> mFragmentTitleList = new ArrayList<>();
     private final SparseArray<WeakReference<Fragment>> instantiatedFragments = new SparseArray<>();
     private ArrayList<FragmentTime> ftList = new ArrayList<>();
     private ViewPager mViewPager;
 
-    public TabAdapter(@NonNull FragmentManager fm, int behavior) {
+    public SuperAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
 

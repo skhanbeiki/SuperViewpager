@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import ir.khanbeiki.superviewpager.TabAdapter;
+import ir.khanbeiki.superviewpager.SuperAdapter;
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 import me.majiajie.pagerbottomtabstrip.PageNavigationView;
 import me.majiajie.pagerbottomtabstrip.item.BaseTabItem;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         pageNavigationView = findViewById(R.id.pageNavigationView);
         viewPager = findViewById(R.id.viewPager);
 
-        TabAdapter adapter = new TabAdapter(getSupportFragmentManager(), 0);
+        SuperAdapter adapter = new SuperAdapter(getSupportFragmentManager(), 0);
         adapter.addFragment(0, true, new FrgDashboard("Dashboard"), "0");
         adapter.addFragment(1, false, new FrgDashboard("LessonMap"), "1");
         adapter.addFragment(2, 1, new FrgDashboard("LeaderBoard"), "2");
